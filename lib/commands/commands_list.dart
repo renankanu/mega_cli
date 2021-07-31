@@ -1,4 +1,4 @@
-import 'implementation/commads_export.dart';
+import 'implementation/commands_export.dart';
 import 'interface/command.dart';
 
 final List<Command> commands = [
@@ -6,7 +6,6 @@ final List<Command> commands = [
     'create',
     [
       CreatePageCommand(),
-      CreateScreenCommand(),
     ],
     ['-c'],
   ),

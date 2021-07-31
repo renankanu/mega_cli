@@ -9,12 +9,12 @@ import '../../common/utils/pubspec/pubspec_lock.dart';
 import '../../core/internationalization.dart';
 import '../../core/locales.g.dart';
 import 'check_dev_version.dart';
-import 'print_get_cli.dart';
+import 'print_mega_cli.dart';
 
 void checkForUpdate() async {
   if (!CliConfig.updateIsCheckingToday()) {
     if (!isDevVersion()) {
-      await PubDevApi.getLatestVersionFromPackage('get_cli')
+      await PubDevApi.getLatestVersionFromPackage('mega_cli')
           .then((versionInPubDev) async {
         await PubspecLock.getVersionCli(disableLog: true)
             .then((versionInstalled) async {
@@ -28,7 +28,7 @@ void checkForUpdate() async {
             LogService.info(
                 LocaleKeys.info_update_available.trArgs([versionInstalled]));
             //await versionCommand();
-            printGetCli();
+            printMegaCli();
             final codeSample = LogService.code('get update');
             LogService.info(
                 '${LocaleKeys.info_update_available2.trArgs([

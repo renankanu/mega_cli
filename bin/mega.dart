@@ -24,10 +24,3 @@ Future<void> main(List<String> arguments) async {
   time.stop();
   LogService.info('Time: ${time.elapsed.inMilliseconds} Milliseconds');
 }
-
-/* void main(List<String> arguments) {
- Core core = Core();
-  core
-      .generate(arguments: List.from(arguments))
-      .then((value) => checkForUpdate()); 
-} */

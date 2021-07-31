@@ -1,4 +1,4 @@
-// DO NOT EDIT. This is code generated via package:get_cli/get_cli.dart
+// DO NOT EDIT. This is code generated via package:mega_cli/mega_cli.dart
 
 // ignore_for_file: lines_longer_than_80_chars
 // ignore: avoid_classes_with_only_static_members
@@ -73,9 +73,9 @@ class LocaleKeys {
   static const sucess_clean_Pattern_generated =
       'sucess_clean_Pattern_generated';
   static const sucess_file_formatted = 'sucess_file_formatted';
-  static const sucess_package_removed = 'sucess_package_removed';
-  static const sucess_package_installed = 'sucess_package_installed';
-  static const sucess_update_cli = 'sucess_update_cli';
+  static const success_package_removed = 'sucess_package_removed';
+  static const success_package_installed = 'sucess_package_installed';
+  static const success_update_cli = 'sucess_update_cli';
   static const sucess_add_controller_in_bindings =
       'sucess_add_controller_in_bindings';
   static const sucess_navigation_added = 'sucess_navigation_added';
@@ -116,7 +116,7 @@ class Locales {
     'error_invalid_file_or_directory': '%s geçerli bir dosya veya dizin değil',
     'error_package_not_found': 'Paket: %s pub.dev\'de bulunamadı',
     'error_cli_version_not_found': 'Yüklemek istediğiniz sürüm bulunamadı.',
-    'error_update_cli': 'get_cli yükseltilirken bir hata oluştu',
+    'error_update_cli': 'mega_cli yükseltilirken bir hata oluştu',
     'error_folder_not_found': '%s klasörü bulunamadı',
     'error_file_not_found': '%s içinde dosya bulunamadı',
     'error_access_denied': '%s için erişim engellendi',
@@ -135,13 +135,13 @@ class Locales {
     'hint_install': 'Mevcut projeye bir paket yükler (dependencies):',
     'hint_remove': 'Mevcut projedeki bir paketi kaldırır (dependencies):',
     'hint_sort': 'İçe aktarılanları sıralar ve dart dosyalarını biçimlendirir',
-    'hint_update': 'GET_CLI günceller',
+    'hint_update': 'mega_cli günceller',
     'hint_version': 'Mevcut CLI sürümünü gösterir\'',
     'info_unnecessary_flag': '%s gerekli değil',
     'info_unnecessary_flag_prural': '%s gerekli değil',
     'info_package_not_installed': 'Paket: %s bu uygulama için yüklenemedi',
     'info_cli_last_version_already_installed':
-        'get_cli\'nin son sürümü zaten yüklü',
+        'mega_cli\'nin son sürümü zaten yüklü',
     'info_no_file_overwritten': 'Hiçbir dosyanın üzerine yazılmadı',
     'info_update_available': 'Bir güncelleme mevcut! Mevcut yüklü sürüm: %s',
     'info_update_available2': 'Yeni sürüm mevcut: %s çalıştırın:',
@@ -200,7 +200,7 @@ class Locales {
     'error_cli_version_not_found':
         'die von Ihnen installierte Version wurde nicht gefunden.',
     'error_update_cli':
-        'Es gab einen Fehler bei der Aktualisierung von get_cli',
+        'Es gab einen Fehler bei der Aktualisierung von mega_cli',
     'error_folder_not_found': 'Ordner %s nicht gefunden',
     'error_file_not_found': 'Datei nicht gefunden in %s',
     'error_access_denied': 'Zugriff auf %s verweigert',
@@ -225,14 +225,14 @@ class Locales {
     'hint_remove':
         'Verwenden Sie diese Option, um ein Paket in Ihrem Projekt zu entfernen (dependencies):',
     'hint_sort': 'Importierte Dart-Dateien sortieren und formatieren',
-    'hint_update': 'So aktualisieren Sie GET_CLI',
+    'hint_update': 'So aktualisieren Sie mega_cli',
     'hint_version': 'Zeigt die aktuelle CLI-Version an\'',
     'info_unnecessary_flag': 'Das %s ist nicht notwendig',
     'info_unnecessary_flag_prural': 'Die %s ist nicht notwendig',
     'info_package_not_installed':
         'Paket: %s ist in dieser Anwendung nicht installiert',
     'info_cli_last_version_already_installed':
-        'Neueste Version von get_cli bereits installiert',
+        'Neueste Version von mega_cli bereits installiert',
     'info_no_file_overwritten': 'Es wurden keine Dateien überschrieben',
     'info_update_available':
         'Es ist ein Update verfügbar! Aktuell installierte Version: %s',
@@ -289,7 +289,7 @@ class Locales {
     'error_package_not_found': 'Package: %s not found in pub.dev',
     'error_cli_version_not_found':
         'failed to find the version you have installed.',
-    'error_update_cli': 'There was an error upgrading get_cli',
+    'error_update_cli': 'There was an error upgrading mega_cli',
     'error_folder_not_found': 'Folder %s not found',
     'error_file_not_found': 'File not found in %s',
     'error_access_denied': 'Access denied to %s',
@@ -311,14 +311,14 @@ class Locales {
     'hint_install': 'Use to install a package in your project (dependencies):',
     'hint_remove': 'Use to remove a package in your project (dependencies):',
     'hint_sort': 'Sort imports and format dart files',
-    'hint_update': 'To update GET_CLI',
+    'hint_update': 'To update mega_cli',
     'hint_version': 'Shows the current CLI version\'',
     'info_unnecessary_flag': 'The %s is not necessary',
     'info_unnecessary_flag_prural': 'The %s are not necessary',
     'info_package_not_installed':
         'Package: %s is not installed in this application',
     'info_cli_last_version_already_installed':
-        'Latest version of get_cli already installed',
+        'Latest version of mega_cli already installed',
     'info_no_file_overwritten': 'No files were overwritten',
     'info_update_available':
         'There\'s an update available! Current installed version: %s',
@@ -371,7 +371,7 @@ class Locales {
     'error_package_not_found': 'Pacote: %s não encontrado em pub.dev',
     'error_cli_version_not_found':
         'Não foi possível encontrar a versão instalada da CLI',
-    'error_update_cli': 'Ocorreu um erro ao atualizar get_cli',
+    'error_update_cli': 'Ocorreu um erro ao atualizar mega_cli',
     'error_folder_not_found': 'Pasta %s não encontrada',
     'error_file_not_found': 'Arquivo não encontrado em %s',
     'error_access_denied': 'Acesso negado a %s',
@@ -395,14 +395,14 @@ class Locales {
         'Use para instalar um pacote em seu projeto (dependencies):',
     'hint_remove': 'Use para remover um pacote em seu projeto (dependencies):',
     'hint_sort': 'Classificar os imports e formatar arquivos dart',
-    'hint_update': 'Para atualizar GET_CLI',
-    'hint_version': 'Mostra a versão atual do get_cli',
+    'hint_update': 'Para atualizar mega_cli',
+    'hint_version': 'Mostra a versão atual do mega_cli',
     'info_unnecessary_flag': 'A flag: %s não é necessária',
     'info_unnecessary_flag_prural': 'As flags: %s não são necessárias',
     'info_package_not_installed':
         'Pacote: %s não está instalado neste aplicativo',
     'info_cli_last_version_already_installed':
-        'Versão mais recente de get_cli já instalada',
+        'Versão mais recente de mega_cli já instalada',
     'info_no_file_overwritten': 'Nenhum arquivo foi sobrescrito',
     'info_update_available':
         'Há uma atualização disponível! Versão atual instalada: %s',

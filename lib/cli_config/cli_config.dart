@@ -5,10 +5,10 @@ import 'package:path/path.dart';
 
 class CliConfig {
   static final DateFormat _formatter = DateFormat('yyyy-MM-dd');
-  // Em devsevolvimento
+  // Em desenvolvimento
   static File getFileConfig() {
     var scriptFile = Platform.script.toFilePath();
-    var path = join(dirname(scriptFile), '.get_cli.yaml');
+    var path = join(dirname(scriptFile), '.mega_cli.yaml');
     var configFile = File(path);
     if (!configFile.existsSync()) {
       configFile.createSync(recursive: true);
@@ -40,7 +40,7 @@ class CliConfig {
     var lastUpdateIndex = lines.indexWhere(
       (element) => element.startsWith('last_update_check:'),
     );
-    if (lines == null || lines.isEmpty || lastUpdateIndex == -1) {
+    if (lines.isEmpty || lastUpdateIndex == -1) {
       return false;
     }
     var dateLatsUpdate = lines[lastUpdateIndex].split(':').last.trim();

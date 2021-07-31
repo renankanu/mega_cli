@@ -1,7 +1,7 @@
 import '../../../common/utils/pubspec/pubspec_lock.dart';
 import '../../../core/internationalization.dart';
 import '../../../core/locales.g.dart';
-import '../../../functions/version/print_get_cli.dart';
+import '../../../functions/version/print_mega_cli.dart';
 import '../../interface/command.dart';
 
 class VersionCommand extends Command {
@@ -12,7 +12,7 @@ class VersionCommand extends Command {
   Future<void> execute() async {
     var version = await PubspecLock.getVersionCli();
     if (version == null) return;
-    printGetCli();
+    printMegaCli();
     print('Version: $version');
   }
 
