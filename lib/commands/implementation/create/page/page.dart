@@ -78,9 +78,9 @@ class CreatePageCommand extends Command {
   void _writeFiles(String path, String name, {bool overwrite = false}) {
     var isServer = PubspecUtils.isServerProject;
     var extraFolder = PubspecUtils.extraFolder ?? true;
-    var controllerFile = handleFileCreate(
+    var blocFile = handleFileCreate(
       name,
-      'controller',
+      'bloc',
       path,
       extraFolder,
       ControllerSample(
@@ -89,9 +89,9 @@ class CreatePageCommand extends Command {
         isServer,
         overwrite: overwrite,
       ),
-      'controllers',
+      'blocs',
     );
-    var controllerDir = Structure.pathToDirImport(controllerFile.path);
+    var controllerDir = Structure.pathToDirImport(blocFile.path);
     var viewFile = handleFileCreate(
       name,
       'view',
@@ -128,7 +128,8 @@ class CreatePageCommand extends Command {
       Structure.pathToDirImport(bindingFile.path),
       Structure.pathToDirImport(viewFile.path),
     );
-    LogService.success(LocaleKeys.sucess_page_create.trArgs([name.pascalCase]));
+    LogService.success(
+        LocaleKeys.success_page_create.trArgs([name.pascalCase]));
   }
 
   @override

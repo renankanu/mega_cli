@@ -67,7 +67,7 @@ class LocaleKeys {
   static const options_yes = 'options_yes';
   static const options_no = 'options_no';
   static const optional_parameters = 'optional_parameters';
-  static const sucess_page_create = 'sucess_page_create';
+  static const success_page_create = 'sucess_page_create';
   static const sucess_locale_generate = 'sucess_locale_generate';
   static const sucess_getx_pattern_generated = 'sucess_getx_pattern_generated';
   static const sucess_clean_Pattern_generated =
@@ -79,7 +79,7 @@ class LocaleKeys {
   static const sucess_add_controller_in_bindings =
       'sucess_add_controller_in_bindings';
   static const sucess_navigation_added = 'sucess_navigation_added';
-  static const sucess_file_created = 'sucess_file_created';
+  static const success_file_created = 'sucess_file_created';
   static const sucess_route_created = 'sucess_route_created';
   static const ask_ios_lang = 'ask_ios_lang';
   static const ask_android_lang = 'ask_android_lang';
