@@ -17,11 +17,11 @@ final List<Command> commands = [
   ),
   HelpCommand(),
   VersionCommand(),
-  InitCommand(),
-  InstallCommand(),
-  RemoveCommand(),
-  SortCommand(),
-  UpdateCommand(),
+  // InitCommand(),
+  // InstallCommand(),
+  // RemoveCommand(),
+  // SortCommand(),
+  // UpdateCommand(),
 ];
 
 class CommandParent extends Command {
