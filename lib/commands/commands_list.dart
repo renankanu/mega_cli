@@ -7,11 +7,6 @@ final List<Command> commands = [
     [CreateModuleCommand()],
     ['-c'],
   ),
-  CommandParent(
-    'generate',
-    [GenerateModelCommand()],
-    ['-g'],
-  ),
   HelpCommand(),
   VersionCommand(),
 ];
