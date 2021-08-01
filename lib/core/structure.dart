@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:mega_cli/common/utils/logger/log_utils.dart';
 import 'package:recase/recase.dart';
 
 import '../exception_handler/exceptions/cli_exception.dart';
@@ -25,6 +26,9 @@ class Structure {
 
   static FileModel model(String? name, String command, bool wrapperFolder,
       {String? on, String? folderName}) {
+    LogService.success('-----------> wrapperFolder ${wrapperFolder}');
+    LogService.success('-----------> on ${on}');
+    LogService.success('-----------> folderName ${folderName}');
     if (on != null && on != '') {
       on = replaceAsExpected(path: on).replaceAll('\\\\', '\\');
       var current = Directory('./lib');

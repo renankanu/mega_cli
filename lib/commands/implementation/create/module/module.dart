@@ -86,7 +86,6 @@ class CreateModuleCommand extends Command {
         name,
         overwrite: overwrite,
       ),
-      'blocs',
     );
     var blocDir = Structure.pathToDirImport(blocFile.path);
     var viewFile = handleFileCreate(
@@ -101,7 +100,6 @@ class CreateModuleCommand extends Command {
         blocDir,
         overwrite: overwrite,
       ),
-      'views',
     );
     var repositoryFile = handleFileCreate(
       name,
@@ -114,7 +112,6 @@ class CreateModuleCommand extends Command {
         '${name.pascalCase}Repository',
         overwrite: overwrite,
       ),
-      'repositories',
     );
 
     LogService.success(

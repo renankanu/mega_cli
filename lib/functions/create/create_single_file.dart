@@ -10,16 +10,15 @@ import '../../core/structure.dart';
 import '../../samples/interface/sample_interface.dart';
 import '../sorter_imports/sort.dart';
 
-File handleFileCreate(String name, String command, String on, bool extraFolder,
-    Sample sample, String folderName,
+File handleFileCreate(
+    String name, String command, String on, bool extraFolder, Sample sample,
     [String sep = '_']) {
-  folderName = folderName;
+  LogService.success('<<->> ');
   final fileModel = Structure.model(
     name,
     command,
     extraFolder,
     on: on,
-    folderName: folderName,
   );
   var path = '${fileModel.path}$sep${fileModel.commandName}.dart';
   sample.path = path;
