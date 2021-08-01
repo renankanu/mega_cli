@@ -75,7 +75,6 @@ class CreateModuleCommand extends Command {
   }
 
   void _writeFiles(String path, String name, {bool overwrite = false}) {
-    var isServer = PubspecUtils.isServerProject;
     var extraFolder = false;
     var blocFile = handleFileCreate(
       name,
@@ -100,7 +99,6 @@ class CreateModuleCommand extends Command {
         '${name.pascalCase}View',
         '${name.pascalCase}Controller',
         blocDir,
-        isServer,
         overwrite: overwrite,
       ),
       'views',
@@ -119,11 +117,6 @@ class CreateModuleCommand extends Command {
       'repositories',
     );
 
-    // addRoute(
-    //   name,
-    //   Structure.pathToDirImport(repositoryFile.path),
-    //   Structure.pathToDirImport(viewFile.path),
-    // );
     LogService.success(
         LocaleKeys.success_module_create.trArgs([name.pascalCase]));
   }

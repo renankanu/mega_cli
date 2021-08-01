@@ -70,25 +70,3 @@ class ErrorCommand extends Command {
   @override
   bool validate() => true;
 }
-
-class NotFoundCommand extends Command {
-  @override
-  String get commandName => 'Not Found Command 🙁';
-
-  @override
-  Future<void> execute() async {
-    //Command findCommand() => _findCommand(0, commands);
-  }
-
-  @override
-  String get hint => 'Not Found Command 🙁';
-
-  @override
-  String get codeSample => '';
-
-  @override
-  int get maxParameters => 0;
-
-  @override
-  bool validate() => true;
-}

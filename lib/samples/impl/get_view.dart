@@ -6,10 +6,9 @@ class GetViewSample extends Sample {
   final String? _controllerDir;
   final String _viewName;
   final String? _controller;
-  final bool _isServer;
 
-  GetViewSample(String path, this._viewName, this._controller,
-      this._controllerDir, this._isServer,
+  GetViewSample(
+      String path, this._viewName, this._controller, this._controllerDir,
       {bool overwrite = false})
       : super(path, overwrite: overwrite);
 
@@ -43,17 +42,6 @@ class $_viewName extends $_controllerName {
 }
   ''';
 
-  String get _serverView =>
-      '''import 'package:get_server/get_server.dart'; $import
-
-class $_viewName extends GetView<$_controller> {
   @override
-  Widget build(BuildContext context) {
-    return Text('GetX to Server is working!');
-  }
-}
-  ''';
-
-  @override
-  String get content => _isServer ? _serverView : _flutterView;
+  String get content => _flutterView;
 }

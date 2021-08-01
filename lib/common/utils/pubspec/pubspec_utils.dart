@@ -118,15 +118,6 @@ class PubspecUtils {
   static bool get nullSafeSupport => !pubSpec.environment!.sdkConstraint!
       .allowsAny(HostedReference.fromJson('<2.12.0').versionConstraint);
 
-  /// make sure it is a get_server project
-  static bool get isServerProject {
-    return containsPackage('get_server');
-  }
-
-  static String get getPackageImport => !isServerProject
-      ? "import 'package:get/get.dart';"
-      : "import 'package:get_server/get_server.dart';";
-
   static v.Version? getPackageVersion(String package) {
     if (containsPackage(package)) {
       var version = pubSpec.allDependencies[package]!;
