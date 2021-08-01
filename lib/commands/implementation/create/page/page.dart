@@ -12,7 +12,6 @@ import '../../../../../core/internationalization.dart';
 import '../../../../../core/locales.g.dart';
 import '../../../../../core/structure.dart';
 import '../../../../../functions/create/create_single_file.dart';
-import '../../../../functions/routes/mega_add_route.dart';
 import '../../../../samples/impl/get_repository.dart';
 import '../../../../samples/impl/get_bloc.dart';
 import '../../../../../samples/impl/get_view.dart';

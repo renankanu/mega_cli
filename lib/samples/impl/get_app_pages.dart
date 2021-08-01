@@ -2,9 +2,9 @@ import '../../common/utils/pubspec/pubspec_utils.dart';
 import '../interface/sample_interface.dart';
 
 /// [Sample] file from [app_pages] file creation.
-class AppPagesSample extends Sample {
+class AppModulesSample extends Sample {
   String initial;
-  AppPagesSample(
+  AppModulesSample(
       {String path = 'lib/app/routes/app_pages.dart', this.initial = 'HOME'})
       : super(path);
   final import = PubspecUtils.getPackageImport;

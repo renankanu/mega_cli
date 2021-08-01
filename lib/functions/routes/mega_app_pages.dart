@@ -11,16 +11,16 @@ import '../find_file/find_file_by_name.dart';
 import '../formatter_dart_file/frommatter_dart_file.dart';
 import 'mega_support_children.dart';
 
-void addAppPage(String name, String bindingDir, String viewDir) {
-  var appPagesFile = findFileByName('app_pages.dart');
+void addAppModule(String name, String bindingDir, String viewDir) {
+  var appModulesFile = findFileByName('app_pages.dart');
   var path = viewDir;
   var lines = <String>[];
-  if (appPagesFile.path.isEmpty) {
-    AppPagesSample().create(skipFormatter: true);
-    appPagesFile = File(AppPagesSample().path);
-    lines = appPagesFile.readAsLinesSync();
+  if (appModulesFile.path.isEmpty) {
+    AppModulesSample().create(skipFormatter: true);
+    appModulesFile = File(AppModulesSample().path);
+    lines = appModulesFile.readAsLinesSync();
   } else {
-    var content = formatterDartFile(appPagesFile.readAsStringSync());
+    var content = formatterDartFile(appModulesFile.readAsStringSync());
     lines = LineSplitter.split(content).toList();
   }
 
@@ -38,7 +38,7 @@ void addAppPage(String name, String bindingDir, String viewDir) {
     pathSplit.removeLast();
     pathSplit.removeLast();
     pathSplit
-        .removeWhere((element) => element == 'app' || element == 'modules');
+        .removeWhere((element) => element == 'app' || element == 'screens');
     var onPageIndex = -1;
     while (pathSplit.isNotEmpty && onPageIndex == -1) {
       onPageIndex = lines.indexWhere(
@@ -61,7 +61,7 @@ void addAppPage(String name, String bindingDir, String viewDir) {
                 '${_getTabs(_countTabs(lines[onPageStartIndex]))}),'),
             onPageStartIndex);
       } else {
-        _logInvalidFormart();
+        _logInvalidFormat();
       }
       if (onPageEndIndex != -1) {
         var indexChildrenStart = lines
@@ -84,11 +84,11 @@ void addAppPage(String name, String bindingDir, String viewDir) {
             index = indexChildrenEnd;
             tabEspaces = _countTabs(lines[onPageStartIndex]) + 2;
           } else {
-            _logInvalidFormart();
+            _logInvalidFormat();
           }
         }
       } else {
-        _logInvalidFormart();
+        _logInvalidFormat();
       }
     }
   }
@@ -107,7 +107,7 @@ ${_getTabs(tabEspaces)}),''';
   lines.insert(0, "$import$bindingDir';");
   lines.insert(0, "$import$viewDir';");
 
-  writeFile(appPagesFile.path, lines.join('\n'),
+  writeFile(appModulesFile.path, lines.join('\n'),
       overwrite: true, logger: false);
 }
 
@@ -125,10 +125,11 @@ int _countTabs(String line) {
 }
 
 /// log invalid format file
-void _logInvalidFormart() {
+void _logInvalidFormat() {
   LogService.info(
-      'the app_pages.dart file does not meet the '
-      'expected format, fails to create children modules',
-      false,
-      false);
+    'the app_pages.dart file does not meet the '
+    'expected format, fails to create children modules',
+    false,
+    false,
+  );
 }

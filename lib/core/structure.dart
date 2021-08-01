@@ -9,7 +9,7 @@ import 'locales.g.dart';
 
 class Structure {
   static final Map<String, String> _paths = {
-    'module': replaceAsExpected(path: 'lib/app/modules'),
+    'module': replaceAsExpected(path: 'lib/app/screens'),
     'widget': replaceAsExpected(path: 'lib/app/widgets/'),
     'model': replaceAsExpected(path: 'lib/app/data/models'),
     'init': replaceAsExpected(path: 'lib/'),
