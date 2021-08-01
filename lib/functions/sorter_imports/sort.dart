@@ -3,7 +3,7 @@ import 'dart:convert';
 import '../../common/utils/pubspec/pubspec_utils.dart';
 import '../../extensions.dart';
 import '../create/create_single_file.dart';
-import '../formatter_dart_file/frommatter_dart_file.dart';
+import '../formatter_dart_file/formatter_dart_file.dart';
 import '../path/replace_to_relative.dart';
 
 /// Sort imports from a dart file
