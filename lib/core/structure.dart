@@ -41,7 +41,6 @@ class Structure {
         return '${element.path}/'.contains('$on/');
       }, orElse: () {
         return list.firstWhere((element) {
-          //Fix erro ao encontrar arquivo com nome
           if (element is File) {
             return false;
           }
@@ -57,6 +56,7 @@ class Structure {
           contains.path,
           ReCase(name!).snakeCase,
           createWithWrappedFolder: wrapperFolder,
+          folderName: folderName,
         ),
         commandName: command,
       );
@@ -67,6 +67,7 @@ class Structure {
         _paths[command],
         ReCase(name!).snakeCase,
         createWithWrappedFolder: wrapperFolder,
+        folderName: folderName,
       ),
       commandName: command,
     );
@@ -91,7 +92,7 @@ class Structure {
   }
 
   static String? getPathWithName(String? firstPath, String secondPath,
-      {bool createWithWrappedFolder = false}) {
+      {bool createWithWrappedFolder = false, required String? folderName}) {
     late String betweenPaths;
     if (Platform.isWindows) {
       betweenPaths = '\\\\';
@@ -100,7 +101,11 @@ class Structure {
     }
     if (betweenPaths.isNotEmpty) {
       if (createWithWrappedFolder) {
-        return firstPath! + betweenPaths + betweenPaths + secondPath;
+        return firstPath! +
+            betweenPaths +
+            folderName! +
+            betweenPaths +
+            secondPath;
       } else {
         return firstPath! + betweenPaths + secondPath;
       }

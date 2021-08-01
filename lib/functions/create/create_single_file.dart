@@ -19,6 +19,7 @@ File handleFileCreate(String name, String command, String on, bool extraFolder,
     command,
     extraFolder,
     on: on,
+    folderName: folderName,
   );
   var path = '${fileModel.path}$sep${fileModel.commandName}.dart';
   sample.path = path;
@@ -76,7 +77,6 @@ File writeFile(String path, String content,
   return _file;
 }
 
-/// Replace the file name separator
 String replacePathTypeSeparator(String path, String separator) {
   if (separator.isNotEmpty) {
     var index = path.indexOf(RegExp(r'controller.dart|model.dart|provider.dart|'
