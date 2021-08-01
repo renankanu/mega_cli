@@ -13,7 +13,6 @@ import '../sorter_imports/sort.dart';
 File handleFileCreate(
     String name, String command, String on, bool extraFolder, Sample sample,
     [String sep = '_']) {
-  LogService.success('<<->> ');
   final fileModel = Structure.model(
     name,
     command,
