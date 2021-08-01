@@ -43,7 +43,7 @@ class CliConfig {
     if (lines.isEmpty || lastUpdateIndex == -1) {
       return false;
     }
-    var dateLatsUpdate = lines[lastUpdateIndex].split(':').last.trim();
+    var dateLatsUpdate = lines[lastUpdateIndex].split('.').last.trim();
     var now = _formatter.parse(_formatter.format(DateTime.now()));
 
     return _formatter.parse(dateLatsUpdate) == now;

@@ -11,8 +11,8 @@ import '../pubspec/pubspec_lock.dart';
 
 class ShellUtils {
   static Future<void> pubGet() async {
-    LogService.info('Running `flutter pub get` …');
-    await run('flutter pub get', verbose: true);
+    LogService.info('Running `flutter pub mega` …');
+    await run('flutter pub mega', verbose: true);
   }
 
   static Future<void> activatedNullSafe() async {

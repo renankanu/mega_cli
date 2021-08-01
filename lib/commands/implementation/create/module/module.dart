@@ -16,7 +16,7 @@ import '../../../../samples/impl/get_repository.dart';
 import '../../../../samples/impl/get_bloc.dart';
 import '../../../../../samples/impl/get_view.dart';
 
-/// The command create a Binding and Controller module and view
+/// The command create a Repository and Module and Bloc and Screen
 class CreateModuleCommand extends Command {
   @override
   String get commandName => 'module';
@@ -27,7 +27,7 @@ class CreateModuleCommand extends Command {
   Future<void> execute() async {
     var isProject = false;
     if (MegaCli.arguments[0] == 'create' || MegaCli.arguments[0] == '-c') {
-      isProject = MegaCli.arguments[1].split(':').first == 'project';
+      isProject = MegaCli.arguments[1].split('.').first == 'project';
     }
     var name = this.name;
     if (name.isEmpty || isProject) {
@@ -76,7 +76,7 @@ class CreateModuleCommand extends Command {
 
   void _writeFiles(String path, String name, {bool overwrite = false}) {
     var isServer = PubspecUtils.isServerProject;
-    var extraFolder = PubspecUtils.extraFolder ?? true;
+    var extraFolder = false;
     var blocFile = handleFileCreate(
       name,
       'bloc',
@@ -129,7 +129,7 @@ class CreateModuleCommand extends Command {
   }
 
   @override
-  String get codeSample => 'mega create module:login';
+  String get codeSample => 'mega create module.login';
 
   @override
   int get maxParameters => 0;

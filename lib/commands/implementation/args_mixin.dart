@@ -9,10 +9,10 @@ mixin ArgsMixin {
   /// all arguments
   ///
   /// example run
-  /// `get create page:product on home`
+  /// `mega create module.product on home`
   ///
   /// ```
-  /// print(args); // [page:product]
+  /// print(args); // [module.product]
   /// ```
   List<String> args = _getArgs();
 
@@ -74,7 +74,7 @@ mixin ArgsMixin {
     if (_args.length > 1) {
       var arg = _args[1];
       if (_args[0] == 'create' || _args[0] == '-c') {
-        var split = arg.split(':');
+        var split = arg.split('.');
         var type = split.first;
         var name = split.last;
 

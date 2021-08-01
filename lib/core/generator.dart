@@ -20,7 +20,7 @@ class MegaCli {
 
   Command _findCommand(int currentIndex, List<Command> commands) {
     try {
-      final currentArgument = arguments[currentIndex].split(':').first;
+      final currentArgument = arguments[currentIndex].split('.').first;
 
       var command = commands.firstWhere(
           (command) =>

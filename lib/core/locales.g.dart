@@ -57,7 +57,7 @@ class LocaleKeys {
   static const hint_update = 'hint_update';
   static const hint_version = 'hint_version';
   static const info_unnecessary_flag = 'info_unnecessary_flag';
-  static const info_unnecessary_flag_prural = 'info_unnecessary_flag_prural';
+  static const info_unnecessary_flag_plural = 'info_unnecessary_flag_prural';
   static const info_package_not_installed = 'info_package_not_installed';
   static const info_cli_last_version_already_installed =
       'info_cli_last_version_already_installed';
@@ -308,7 +308,7 @@ class Locales {
     'hint_remove': 'Use to remove a package in your project (dependencies):',
     'hint_sort': 'Sort imports and format dart files',
     'hint_update': 'To update mega_cli',
-    'hint_version': 'Shows the current CLI version\'',
+    'hint_version': 'Shows the current CLI version',
     'info_unnecessary_flag': 'The %s is not necessary',
     'info_unnecessary_flag_prural': 'The %s are not necessary',
     'info_package_not_installed':

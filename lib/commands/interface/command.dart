@@ -35,13 +35,13 @@ abstract class Command with ArgsMixin {
   bool validate() {
     if (MegaCli.arguments.contains(commandName) ||
         MegaCli.arguments.contains('$commandName:$name')) {
-      var flagsNotAceppts = flags;
-      flagsNotAceppts.removeWhere((element) => acceptedFlags.contains(element));
-      if (flagsNotAceppts.isNotEmpty) {
+      var flagsNotAccepts = flags;
+      flagsNotAccepts.removeWhere((element) => acceptedFlags.contains(element));
+      if (flagsNotAccepts.isNotEmpty) {
         LogService.info(LocaleKeys.info_unnecessary_flag.trArgsPlural(
-          LocaleKeys.info_unnecessary_flag_prural,
-          flagsNotAceppts.length,
-          [flagsNotAceppts.toString()],
+          LocaleKeys.info_unnecessary_flag_plural,
+          flagsNotAccepts.length,
+          [flagsNotAccepts.toString()],
         )!);
       }
 
