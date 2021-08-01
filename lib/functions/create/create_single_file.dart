@@ -14,11 +14,12 @@ File handleFileCreate(String name, String command, String on, bool extraFolder,
     Sample sample, String folderName,
     [String sep = '_']) {
   folderName = folderName;
-  /* if (folderName.isNotEmpty) {
-    extraFolder = PubspecUtils.extraFolder ?? extraFolder;
-  } */
-  final fileModel = Structure.model(name, command, extraFolder,
-      on: on, folderName: folderName);
+  final fileModel = Structure.model(
+    name,
+    command,
+    extraFolder,
+    on: on,
+  );
   var path = '${fileModel.path}$sep${fileModel.commandName}.dart';
   sample.path = path;
   return sample.create();

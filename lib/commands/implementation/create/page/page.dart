@@ -13,8 +13,8 @@ import '../../../../../core/locales.g.dart';
 import '../../../../../core/structure.dart';
 import '../../../../../functions/create/create_single_file.dart';
 import '../../../../../functions/routes/get_add_route.dart';
-import '../../../../../samples/impl/get_binding.dart';
-import '../../../../../samples/impl/get_controller.dart';
+import '../../../../samples/impl/get_repository.dart';
+import '../../../../samples/impl/get_bloc.dart';
 import '../../../../../samples/impl/get_view.dart';
 
 /// The command create a Binding and Controller page and view
@@ -83,15 +83,14 @@ class CreatePageCommand extends Command {
       'bloc',
       path,
       extraFolder,
-      ControllerSample(
+      BlocSample(
         '',
         name,
-        isServer,
         overwrite: overwrite,
       ),
       'blocs',
     );
-    var controllerDir = Structure.pathToDirImport(blocFile.path);
+    var blocDir = Structure.pathToDirImport(blocFile.path);
     var viewFile = handleFileCreate(
       name,
       'view',
@@ -101,31 +100,29 @@ class CreatePageCommand extends Command {
         '',
         '${name.pascalCase}View',
         '${name.pascalCase}Controller',
-        controllerDir,
+        blocDir,
         isServer,
         overwrite: overwrite,
       ),
       'views',
     );
-    var bindingFile = handleFileCreate(
+    var repositoryFile = handleFileCreate(
       name,
-      'binding',
+      'repository',
       path,
       extraFolder,
-      BindingSample(
+      RepositorySample(
         '',
         name,
-        '${name.pascalCase}Binding',
-        controllerDir,
-        isServer,
+        '${name.pascalCase}Repository',
         overwrite: overwrite,
       ),
-      'bindings',
+      'repositories',
     );
 
     addRoute(
       name,
-      Structure.pathToDirImport(bindingFile.path),
+      Structure.pathToDirImport(repositoryFile.path),
       Structure.pathToDirImport(viewFile.path),
     );
     LogService.success(

@@ -7,8 +7,6 @@ import '../models/file_model.dart';
 import 'internationalization.dart';
 import 'locales.g.dart';
 
-//import 'package:path/path.dart' as p;
-
 class Structure {
   static final Map<String, String> _paths = {
     'page': Directory(replaceAsExpected(
@@ -59,7 +57,6 @@ class Structure {
           contains.path,
           ReCase(name!).snakeCase,
           createWithWrappedFolder: wrapperFolder,
-          folderName: folderName,
         ),
         commandName: command,
       );
@@ -70,7 +67,6 @@ class Structure {
         _paths[command],
         ReCase(name!).snakeCase,
         createWithWrappedFolder: wrapperFolder,
-        folderName: folderName,
       ),
       commandName: command,
     );
@@ -95,7 +91,7 @@ class Structure {
   }
 
   static String? getPathWithName(String? firstPath, String secondPath,
-      {bool createWithWrappedFolder = false, required String? folderName}) {
+      {bool createWithWrappedFolder = false}) {
     late String betweenPaths;
     if (Platform.isWindows) {
       betweenPaths = '\\\\';
@@ -104,11 +100,7 @@ class Structure {
     }
     if (betweenPaths.isNotEmpty) {
       if (createWithWrappedFolder) {
-        return firstPath! +
-            betweenPaths +
-            folderName! +
-            betweenPaths +
-            secondPath;
+        return firstPath! + betweenPaths + betweenPaths + secondPath;
       } else {
         return firstPath! + betweenPaths + secondPath;
       }
