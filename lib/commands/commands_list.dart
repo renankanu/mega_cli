@@ -4,14 +4,12 @@ import 'interface/command.dart';
 final List<Command> commands = [
   CommandParent(
     'create',
-    [
-      CreateModuleCommand(),
-    ],
+    [CreateModuleCommand()],
     ['-c'],
   ),
   CommandParent(
     'generate',
-    [GenerateLocalesCommand(), GenerateModelCommand()],
+    [GenerateModelCommand()],
     ['-g'],
   ),
   HelpCommand(),

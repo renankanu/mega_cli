@@ -42,7 +42,7 @@ class LocaleKeys {
   static const error_unexpected = 'error_unexpected';
   static const example = 'example';
   static const hint_create_controller = 'hint_create_controller';
-  static const hint_create_page = 'hint_create_page';
+  static const hint_create_module = 'hint_create_mega';
   static const hint_create_project = 'hint_create_project';
   static const hint_create_provider = 'hint_create_provider';
   static const hint_create_screen = 'hint_create_screen';
@@ -123,7 +123,7 @@ class Locales {
     'error_unexpected': 'Beklenmeyen bir hata meydana geldi:',
     'example': 'Örneğin:',
     'hint_create_controller': 'Controller oluşturur',
-    'hint_create_page': 'Sayfa oluşturur',
+    'hint_create_mega': 'Sayfa oluşturur',
     'hint_create_project': 'Yeni proje oluşturur',
     'hint_create_provider': 'Provider oluşturur',
     'hint_create_screen': 'Screen oluşturur',
@@ -150,8 +150,6 @@ class Locales {
     'optional_parameters': 'Opsiyonel parametreler: %s',
     'sucess_page_create': '%s sayfası başarıyla oluşturuldu.',
     'sucess_locale_generate': 'yerel dosyalar başarıyla oluşturuldu.',
-    'sucess_getx_pattern_generated':
-        'GetX Pattern yapısı başarıyla oluşturuldu.',
     'sucess_clean_Pattern_generated':
         'CLEAN Pattern yapısı başarıyla oluşturuldu.',
     'sucess_file_formatted': ' \'%s\' başarıyla biçimlendirildi.',
@@ -210,7 +208,7 @@ class Locales {
     'example': 'Beispiel:',
     'warning': 'Warnung:',
     'hint_create_controller': 'Controller generieren',
-    'hint_create_page': 'Verwendung zum Erzeugen von Pages',
+    'hint_create_mega': 'Verwendung zum Erzeugen von Pages',
     'hint_create_project': 'Zum Erzeugen eines neuen Projekts verwenden',
     'hint_create_provider': 'Einen neuen Provider erstellen',
     'hint_create_screen': 'Neues Screen generieren',
@@ -243,8 +241,6 @@ class Locales {
     'optional_parameters': 'Optionale Parameter: %s',
     'sucess_page_create': '%s-Page erfolgreich erstellt.',
     'sucess_locale_generate': 'Sprachumgebungsdateien erfolgreich generiert.',
-    'sucess_getx_pattern_generated':
-        'GetX Pattern-Struktur erfolgreich erzeugt.',
     'sucess_clean_Pattern_generated':
         'CLEAN Pattern-Struktur erfolgreich erzeugt.',
     'sucess_file_formatted': ' \'%s\' wurde erfolgreich formatiert',
@@ -299,7 +295,7 @@ class Locales {
     'example': 'Example:',
     'warning': 'Warning:',
     'hint_create_controller': 'Generate controller',
-    'hint_create_page': 'Use to generate modules',
+    'hint_create_mega': 'Use to generate modules',
     'hint_create_project': 'Use to generate new project',
     'hint_create_provider': 'Create a new Provider',
     'hint_create_screen': 'Generate new screen',
@@ -329,8 +325,6 @@ class Locales {
     'optional_parameters': 'Optional parameters: %s',
     'sucess_page_create': '%s page created successfully.',
     'sucess_locale_generate': 'locale files generated successfully.',
-    'sucess_getx_pattern_generated':
-        'GetX Pattern structure successfully generated.',
     'sucess_clean_Pattern_generated':
         'CLEAN Pattern structure successfully generated.',
     'sucess_file_formatted': ' \'%s\' was successfully formatted',
@@ -378,7 +372,7 @@ class Locales {
     'error_unexpected': 'Ocorreu um erro inesperado:',
     'example': 'Exemplo:',
     'hint_create_controller': 'Gerar um novo controller',
-    'hint_create_page':
+    'hint_create_mega':
         'Gerar um novo modulo, (controller, view e bindigns) (Use essa opcão se está usando getx_pattern)',
     'hint_create_project':
         'Crie um novo projeto, escolha flutter ou get server',

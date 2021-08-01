@@ -9,7 +9,7 @@ bool get supportChildrenRoutes {
     return false;
   }
   var supportChildren = Version.parse('3.21.0').compareTo(
-          PubspecUtils.getPackageVersion('get') ?? Version.parse('3.21.0')) <=
+          PubspecUtils.getPackageVersion('mega') ?? Version.parse('3.21.0')) <=
       0;
   if (supportChildren) {
     var routesFile = findFileByName('app_routes.dart');

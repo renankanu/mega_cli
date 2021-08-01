@@ -30,7 +30,7 @@ class VersionCommand extends Command {
   }
 
   @override
-  String get codeSample => 'get --version';
+  String get codeSample => 'mega --version';
 
   @override
   int get maxParameters => 0;

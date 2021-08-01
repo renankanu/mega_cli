@@ -71,7 +71,7 @@ class GenerateModelCommand extends Command {
     if ((withArgument.isEmpty || p.extension(withArgument) != '.json') &&
         fromArgument.isEmpty) {
       var codeSample =
-          'get generate model on home with assets/models/user.json';
+          'mega generate model on home with assets/models/user.json';
       throw CliException(LocaleKeys.error_invalid_json.trArgs([withArgument]),
           codeSample: codeSample);
     }
@@ -93,9 +93,9 @@ class GenerateModelCommand extends Command {
   }
 
   final String? codeSample1 = LogService.code(
-      'get generate model on home with assets/models/user.json');
+      'mega generate model on home with assets/models/user.json');
   final String? codeSample2 = LogService.code(
-      'get generate model on home from "https://api.github.com/users/CpdnCristiano"');
+      'mega generate model on home from "https://api.github.com/users/CpdnCristiano"');
 
   @override
   String get codeSample => '''

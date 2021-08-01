@@ -29,7 +29,7 @@ void checkForUpdate() async {
                 LocaleKeys.info_update_available.trArgs([versionInstalled]));
             //await versionCommand();
             printMegaCli();
-            final codeSample = LogService.code('get update');
+            final codeSample = LogService.code('mega update');
             LogService.info(
                 '${LocaleKeys.info_update_available2.trArgs([
                       versionInPubDev

@@ -11,8 +11,8 @@ import '../../samples/impl/get_route.dart';
 import '../create/create_single_file.dart';
 import '../find_file/find_file_by_name.dart';
 import '../formatter_dart_file/frommatter_dart_file.dart';
-import 'get_app_pages.dart';
-import 'get_support_children.dart';
+import 'mega_app_pages.dart';
+import 'mega_support_children.dart';
 
 /// This command will create the route to the new page
 void addRoute(String nameRoute, String bindingDir, String viewDir) {
