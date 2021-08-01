@@ -5,7 +5,7 @@ final List<Command> commands = [
   CommandParent(
     'create',
     [
-      CreatePageCommand(),
+      CreateModuleCommand(),
     ],
     ['-c'],
   ),

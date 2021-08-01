@@ -55,11 +55,11 @@ class ErrorCommand extends Command {
   @override
   Future<void> execute() async {
     LogService.error(error);
-    LogService.info('run `get help` to help', false, false);
+    LogService.info('run `mega help` to help', false, false);
   }
 
   @override
-  String get hint => 'Print on erro';
+  String get hint => 'Print on erro ❌';
 
   @override
   String get codeSample => '';
@@ -71,9 +71,9 @@ class ErrorCommand extends Command {
   bool validate() => true;
 }
 
-class NotFoundComannd extends Command {
+class NotFoundCommand extends Command {
   @override
-  String get commandName => 'Not Found Comannd';
+  String get commandName => 'Not Found Command 🙁';
 
   @override
   Future<void> execute() async {
@@ -81,7 +81,7 @@ class NotFoundComannd extends Command {
   }
 
   @override
-  String get hint => 'Not Found Comannd';
+  String get hint => 'Not Found Command 🙁';
 
   @override
   String get codeSample => '';

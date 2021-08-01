@@ -9,11 +9,7 @@ import 'locales.g.dart';
 
 class Structure {
   static final Map<String, String> _paths = {
-    'page': Directory(replaceAsExpected(
-                path: '${Directory.current.path} /lib/pages/'))
-            .existsSync()
-        ? replaceAsExpected(path: 'lib/pages')
-        : replaceAsExpected(path: 'lib/app/modules'),
+    'module': replaceAsExpected(path: 'lib/app/modules'),
     'widget': replaceAsExpected(path: 'lib/app/widgets/'),
     'model': replaceAsExpected(path: 'lib/app/data/models'),
     'init': replaceAsExpected(path: 'lib/'),

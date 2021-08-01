@@ -13,7 +13,7 @@ class AppTranslation {
 
 class LocaleKeys {
   LocaleKeys._();
-  static const ask_existing_page = 'ask_existing_page';
+  static const ask_existing_module = 'ask_existing_page';
   static const ask_name_to_project = 'ask_name_to_project';
   static const ask_company_domain = 'ask_company_domain';
   static const ask_model_name = 'ask_model_name';
@@ -67,7 +67,7 @@ class LocaleKeys {
   static const options_yes = 'options_yes';
   static const options_no = 'options_no';
   static const optional_parameters = 'optional_parameters';
-  static const success_page_create = 'sucess_page_create';
+  static const success_module_create = 'sucess_page_create';
   static const sucess_locale_generate = 'sucess_locale_generate';
   static const sucess_getx_pattern_generated = 'sucess_getx_pattern_generated';
   static const sucess_clean_Pattern_generated =
@@ -85,7 +85,7 @@ class LocaleKeys {
   static const ask_android_lang = 'ask_android_lang';
   static const ask_use_null_safe = 'ask_use_null_safe';
   static const ask_use_linter = 'ask_use_linter';
-  static const ask_new_page_name = 'ask_new_page_name';
+  static const ask_new_module_name = 'ask_new_page_name';
   static const error_no_package_to_remove = 'error_no_package_to_remove';
   static const warning = 'warning';
   static const options_rename = 'options_rename';
@@ -299,7 +299,7 @@ class Locales {
     'example': 'Example:',
     'warning': 'Warning:',
     'hint_create_controller': 'Generate controller',
-    'hint_create_page': 'Use to generate pages',
+    'hint_create_page': 'Use to generate modules',
     'hint_create_project': 'Use to generate new project',
     'hint_create_provider': 'Create a new Provider',
     'hint_create_screen': 'Generate new screen',

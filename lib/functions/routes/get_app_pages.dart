@@ -128,7 +128,7 @@ int _countTabs(String line) {
 void _logInvalidFormart() {
   LogService.info(
       'the app_pages.dart file does not meet the '
-      'expected format, fails to create children pages',
+      'expected format, fails to create children modules',
       false,
       false);
 }

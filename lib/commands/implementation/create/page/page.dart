@@ -17,13 +17,13 @@ import '../../../../samples/impl/get_repository.dart';
 import '../../../../samples/impl/get_bloc.dart';
 import '../../../../../samples/impl/get_view.dart';
 
-/// The command create a Binding and Controller page and view
-class CreatePageCommand extends Command {
+/// The command create a Binding and Controller module and view
+class CreateModuleCommand extends Command {
   @override
-  String get commandName => 'page';
+  String get commandName => 'module';
 
   @override
-  List<String> get alias => ['module', '-p', '-m'];
+  List<String> get alias => ['module', '-m'];
   @override
   Future<void> execute() async {
     var isProject = false;
@@ -45,15 +45,15 @@ class CreatePageCommand extends Command {
 
   void checkForAlreadyExists(String? name) {
     var _fileModel =
-        Structure.model(name, 'page', true, on: onCommand, folderName: name);
+        Structure.model(name, 'module', true, on: onCommand, folderName: name);
     var pathSplit = Structure.safeSplitPath(_fileModel.path!);
 
     pathSplit.removeLast();
     var path = pathSplit.join('/');
     path = Structure.replaceAsExpected(path: path);
     if (Directory(path).existsSync()) {
-      LogService.info(
-          Translation(LocaleKeys.ask_existing_page.trArgs([name])).toString());
+      LogService.info(Translation(LocaleKeys.ask_existing_module.trArgs([name]))
+          .toString());
       final menu = Menu([
         LocaleKeys.options_yes.tr,
         LocaleKeys.options_no.tr,
@@ -64,7 +64,7 @@ class CreatePageCommand extends Command {
         _writeFiles(path, name!, overwrite: true);
       } else if (result.index == 2) {
         final dialog = CLI_Dialog();
-        dialog.addQuestion(LocaleKeys.ask_new_page_name.tr, 'name');
+        dialog.addQuestion(LocaleKeys.ask_new_module_name.tr, 'name');
         name = dialog.ask()['name'] as String?;
 
         checkForAlreadyExists(name!.trim().snakeCase);
@@ -120,17 +120,17 @@ class CreatePageCommand extends Command {
       'repositories',
     );
 
-    addRoute(
-      name,
-      Structure.pathToDirImport(repositoryFile.path),
-      Structure.pathToDirImport(viewFile.path),
-    );
+    // addRoute(
+    //   name,
+    //   Structure.pathToDirImport(repositoryFile.path),
+    //   Structure.pathToDirImport(viewFile.path),
+    // );
     LogService.success(
-        LocaleKeys.success_page_create.trArgs([name.pascalCase]));
+        LocaleKeys.success_module_create.trArgs([name.pascalCase]));
   }
 
   @override
-  String get codeSample => 'get create page:product';
+  String get codeSample => 'get create module:login';
 
   @override
   int get maxParameters => 0;
