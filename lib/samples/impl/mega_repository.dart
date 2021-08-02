@@ -1,10 +1,10 @@
 import '../interface/sample_interface.dart';
 
 /// [Sample] file from Module_Repository file creation.
-class RepositorySample extends Sample {
+class MegaRepositorySample extends Sample {
   final String repositoryName;
 
-  RepositorySample({String? path, required this.repositoryName})
+  MegaRepositorySample({String? path, required this.repositoryName})
       : super(path = '');
 
   @override

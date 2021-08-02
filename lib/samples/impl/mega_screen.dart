@@ -1,49 +1,34 @@
-import '../../common/utils/pubspec/pubspec_utils.dart';
 import '../interface/sample_interface.dart';
 
 /// [Sample] file from Module_View file creation.
 class MegaScreenSample extends Sample {
-  final String? _controllerDir;
-  final String _viewName;
-  final String? _controller;
+  final String screenName;
+  final String routName;
 
-  MegaScreenSample(
-    String path,
-    this._viewName,
-    this._controller,
-    this._controllerDir,
-  ) : super(path = '');
+  MegaScreenSample({
+    String? path,
+    required this.screenName,
+    required this.routName,
+  }) : super(path = '');
 
-  String get import => _controllerDir != null
-      ? '''import 'package:${PubspecUtils.projectName}/$_controllerDir';'''
-      : '';
+  @override
+  String get content => '''import 'package:flutter/material.dart';
+import 'package:mega_flutter_base/mega_base_screen.dart';
 
-  String get _controllerName =>
-      _controller != null ? 'GetView<$_controller>' : 'GetView';
+class $screenName extends MegaBaseScreen {
+  static const String routeName = '/$routName';
 
-  String get _flutterView => '''import 'package:flutter/material.dart';
-import 'package:get/get.dart'; 
-$import
+  const $screenName({Key key}) : super(key: key);
 
-class $_viewName extends $_controllerName {
+  @override
+  _${screenName}State createState() => _${screenName}State();
+}
+
+class _${screenName}State extends MegaBaseScreenState<$screenName>
+    with MegaBaseScreenMixin {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('$_viewName'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Text(
-          '$_viewName is working', 
-          style: TextStyle(fontSize:20),
-        ),
-      ),
-    );
+    return Container();
   }
-}
-  ''';
-
-  @override
-  String get content => _flutterView;
+}''';
 }

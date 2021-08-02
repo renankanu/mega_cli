@@ -13,7 +13,7 @@ import '../../../../../core/locales.g.dart';
 import '../../../../../core/structure.dart';
 import '../../../../../functions/create/create_single_file.dart';
 import '../../../../samples/impl/mega_repository.dart';
-import '../../../../samples/impl/get_bloc.dart';
+import '../../../../samples/impl/mega_bloc.dart';
 import '../../../../samples/impl/mega_module.dart';
 
 /// The command create a Repository and Module and Bloc and Screen
@@ -81,7 +81,7 @@ class CreateModuleCommand extends Command {
       'bloc',
       path,
       extraFolder,
-      BlocSample(
+      MegaBlocSample(
         '',
         name,
         overwrite: overwrite,
@@ -90,19 +90,17 @@ class CreateModuleCommand extends Command {
     var blocDir = Structure.pathToDirImport(blocFile.path);
     var screenFile = handleFileCreate(
       name,
-      'view',
+      'screen',
       path,
       extraFolder,
       MegaScreenSample(
-        '',
-        '${name.pascalCase}View',
-        '${name.pascalCase}Controller',
-        blocDir,
+        screenName: '${name.pascalCase}Screen',
+        routName: name.pascalCase,
       ),
     );
     var moduleFile = handleFileCreate(
       name,
-      'view',
+      'module',
       path,
       extraFolder,
       MegaModuleSample(
@@ -117,7 +115,7 @@ class CreateModuleCommand extends Command {
       'repository',
       path,
       extraFolder,
-      RepositorySample(repositoryName: '${name.pascalCase}Repository'),
+      MegaRepositorySample(repositoryName: '${name.pascalCase}Repository'),
     );
 
     LogService.success(

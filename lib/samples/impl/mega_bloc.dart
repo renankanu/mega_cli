@@ -3,9 +3,9 @@ import 'package:recase/recase.dart';
 import '../interface/sample_interface.dart';
 
 /// [Sample] file from Module_Controller file creation.
-class BlocSample extends Sample {
+class MegaBlocSample extends Sample {
   final String _fileName;
-  BlocSample(String path, this._fileName, {bool overwrite = false})
+  MegaBlocSample(String path, this._fileName, {bool overwrite = false})
       : super(path, overwrite: overwrite);
 
   @override

@@ -12,7 +12,7 @@ class MegaModuleSample extends Sample {
     this._viewName,
     this._controller,
     this._controllerDir,
-  ) : super(path = '');
+  ) : super(path);
 
   String get import => _controllerDir != null
       ? '''import 'package:${PubspecUtils.projectName}/$_controllerDir';'''

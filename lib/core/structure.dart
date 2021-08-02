@@ -26,9 +26,6 @@ class Structure {
 
   static FileModel model(String? name, String command, bool wrapperFolder,
       {String? on, String? folderName}) {
-    LogService.success('-----------> wrapperFolder ${wrapperFolder}');
-    LogService.success('-----------> on ${on}');
-    LogService.success('-----------> folderName ${folderName}');
     if (on != null && on != '') {
       on = replaceAsExpected(path: on).replaceAll('\\\\', '\\');
       var current = Directory('./lib');
