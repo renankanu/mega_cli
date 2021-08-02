@@ -42,7 +42,6 @@ void addRoute(String nameRoute, String bindingDir, String viewDir) async {
   var declareRoute = 'static const ${nameRoute.snakeCase.toUpperCase()} =';
   var line = "$declareRoute '/$route';";
 
-  LogService.error('--------${await supportChildrenRoutes} 🚘');
   if (await supportChildrenRoutes) {
     line = '$declareRoute ${_pathsToRoute(pathSplit)};';
     var indexEndPaths =

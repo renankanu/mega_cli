@@ -25,7 +25,6 @@ void addAppPage(String name, String bindingDir, String viewDir) async {
       lines.indexWhere((element) => element.contains('];'), indexRoutes);
 
   var tabEspaces = 2;
-  LogService.error('======= ${await supportChildrenRoutes}');
   if (await supportChildrenRoutes) {
     routesOrPath = '_Paths';
     var pathSplit = path.split('/');
