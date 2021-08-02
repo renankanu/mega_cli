@@ -87,7 +87,7 @@ class CreateModuleCommand extends Command {
         overwrite: overwrite,
       ),
     );
-    var blocDir = Structure.pathToDirImport(blocFile.path);
+    var blocPath = Structure.pathToDirImport(blocFile.path);
     var screenFile = handleFileCreate(
       name,
       'screen',
@@ -98,18 +98,7 @@ class CreateModuleCommand extends Command {
         routName: name.pascalCase,
       ),
     );
-    var moduleFile = handleFileCreate(
-      name,
-      'module',
-      path,
-      extraFolder,
-      MegaModuleSample(
-        '',
-        '${name.pascalCase}View',
-        '${name.pascalCase}Controller',
-        blocDir,
-      ),
-    );
+    var screenPath = Structure.pathToDirImport(screenFile.path);
     var repositoryFile = handleFileCreate(
       name,
       'repository',
@@ -117,7 +106,22 @@ class CreateModuleCommand extends Command {
       extraFolder,
       MegaRepositorySample(repositoryName: '${name.pascalCase}Repository'),
     );
-
+    var repositoryPath = Structure.pathToDirImport(repositoryFile.path);
+    handleFileCreate(
+      name,
+      'module',
+      path,
+      extraFolder,
+      MegaModuleSample(
+        moduleName: '${name.pascalCase}Module',
+        blocName: '${name.pascalCase}Bloc',
+        repositoryName: '${name.pascalCase}Repository',
+        screenName: '${name.pascalCase}Screen',
+        blocImportDir: blocPath,
+        repositoryImportDir: repositoryPath,
+        screenImportDir: screenPath,
+      ),
+    );
     LogService.success(
         LocaleKeys.success_module_create.trArgs([name.pascalCase]));
   }
