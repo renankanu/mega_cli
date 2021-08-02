@@ -125,7 +125,8 @@ class CreateModuleCommand extends Command {
     );
     var modulePath = Structure.pathToDirImport(moduleFile.path);
 
-    addAppPage('${name.pascalCase}Module', modulePath);
+    addAppPage(name.snakeCase, '${name.pascalCase}Module', modulePath);
+    addAppRoute(name.snakeCase, '${name.pascalCase}Screen', screenPath);
 
     LogService.success(
         '${LocaleKeys.success_module_create.trArgs([name.pascalCase])} 🚀');
