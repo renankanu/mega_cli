@@ -1,3 +1,5 @@
+import 'package:mega_cli/commands/implementation/update/update.dart';
+
 import 'implementation/commands_export.dart';
 import 'interface/command.dart';
 
@@ -9,6 +11,7 @@ final List<Command> commands = [
   ),
   HelpCommand(),
   VersionCommand(),
+  UpdateCommand()
 ];
 
 class CommandParent extends Command {
