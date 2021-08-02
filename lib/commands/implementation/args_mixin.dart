@@ -19,7 +19,7 @@ mixin ArgsMixin {
   /// all flags
   ///
   /// example run
-  /// `get sort . --skipRename --relative`
+  /// `mega sort . --skipRename --relative`
   ///
   /// ```
   /// print(flags); // [--skipRename, --relative]
@@ -29,7 +29,7 @@ mixin ArgsMixin {
   /// return parameter `on`
   ///
   /// example run
-  /// `get create page:product on home`
+  /// `mega create module:product on home`
   ///
   /// ```
   /// print(onCommand); // home
@@ -41,7 +41,7 @@ mixin ArgsMixin {
   /// return parameter `with`
   ///
   /// example run
-  /// `get g model with assets/model/user.json`
+  /// `mega g model with assets/model/user.json`
   ///
   /// ```
   /// print(withArgument); //  assets/model/user.json
@@ -53,7 +53,7 @@ mixin ArgsMixin {
   /// return parameter `from`
   ///
   /// example run
-  /// `get g model from 'YOUR_MODEL_URL'`
+  /// `mega g model from 'YOUR_MODEL_URL'`
   ///
   /// ```
   /// print(fromArgument); // 'YOUR_MODEL_URL'
@@ -65,7 +65,7 @@ mixin ArgsMixin {
   /// return parameter `name`
   ///
   /// example run
-  /// `get create page:product on home`
+  /// `mega create module:product on home`
   ///
   /// ```
   /// print(name); // product
@@ -94,10 +94,10 @@ mixin ArgsMixin {
     return '';
   }
 
-  /// return [true] if conatains flags
+  /// return [true] if contains flags
   ///
   /// example run
-  /// `get sort . --skipRename`
+  /// `mega sort . --skipRename`
   ///
   /// ```
   /// print(containsArg('--skipRename')); // true
