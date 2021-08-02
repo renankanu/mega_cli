@@ -33,7 +33,7 @@ class ShellUtils {
       if (Platform.script.path.contains('flutter')) {
         if (isGit) {
           await run(
-              'flutter pub global activate -sgit https://github.com/jonataslaw/mega_cli/',
+              'flutter pub global activate -sgit https://github.com/renankanu/mega_cli/',
               verbose: true);
         } else {
           await run('flutter pub global activate mega_cli', verbose: true);
@@ -41,7 +41,7 @@ class ShellUtils {
       } else {
         if (isGit) {
           await run(
-              'flutter pub global activate -sgit https://github.com/jonataslaw/mega_cli/',
+              'flutter pub global activate -sgit https://github.com/renankanu/mega_cli/',
               verbose: true);
         } else {
           await run('flutter pub global activate mega_cli', verbose: true);
