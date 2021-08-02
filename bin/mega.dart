@@ -8,18 +8,12 @@ Future<void> main(List<String> arguments) async {
   time.start();
   final command = MegaCli(arguments).findCommand();
 
-  if (arguments.contains('--debug')) {
+  try {
     if (command.validate()) {
       await command.execute().then((value) => checkForUpdate());
     }
-  } else {
-    try {
-      if (command.validate()) {
-        await command.execute().then((value) => checkForUpdate());
-      }
-    } on Exception catch (e) {
-      ExceptionHandler().handle(e);
-    }
+  } on Exception catch (e) {
+    ExceptionHandler().handle(e);
   }
   time.stop();
   LogService.info('Time: ${time.elapsed.inMilliseconds} Milliseconds');
