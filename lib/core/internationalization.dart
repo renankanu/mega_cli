@@ -50,10 +50,6 @@ extension Trans on String {
     return key;
   }
 
-  String? trPlural([String? plural, int i = 0]) {
-    return i > 1 ? plural?.tr : tr;
-  }
-
   String? trArgsPlural(
       [String? plural, int i = 0, List<String> args = const []]) {
     return i > 1 ? plural?.trArgs(args) : trArgs(args);
