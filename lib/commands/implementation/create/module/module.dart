@@ -3,18 +3,18 @@ import 'dart:io';
 import 'package:cli_dialog/cli_dialog.dart';
 import 'package:cli_menu/cli_menu.dart';
 import 'package:mega_cli/commands/interface/command.dart';
+import 'package:mega_cli/samples/impl/mega_screen.dart';
 import 'package:recase/recase.dart';
 
 import '../../../../../common/utils/logger/log_utils.dart';
-import '../../../../../common/utils/pubspec/pubspec_utils.dart';
 import '../../../../../core/generator.dart';
 import '../../../../../core/internationalization.dart';
 import '../../../../../core/locales.g.dart';
 import '../../../../../core/structure.dart';
 import '../../../../../functions/create/create_single_file.dart';
-import '../../../../samples/impl/get_repository.dart';
+import '../../../../samples/impl/mega_repository.dart';
 import '../../../../samples/impl/get_bloc.dart';
-import '../../../../../samples/impl/get_view.dart';
+import '../../../../samples/impl/mega_module.dart';
 
 /// The command create a Repository and Module and Bloc and Screen
 class CreateModuleCommand extends Command {
@@ -88,17 +88,28 @@ class CreateModuleCommand extends Command {
       ),
     );
     var blocDir = Structure.pathToDirImport(blocFile.path);
-    var viewFile = handleFileCreate(
+    var screenFile = handleFileCreate(
       name,
       'view',
       path,
       extraFolder,
-      GetViewSample(
+      MegaScreenSample(
         '',
         '${name.pascalCase}View',
         '${name.pascalCase}Controller',
         blocDir,
-        overwrite: overwrite,
+      ),
+    );
+    var moduleFile = handleFileCreate(
+      name,
+      'view',
+      path,
+      extraFolder,
+      MegaModuleSample(
+        '',
+        '${name.pascalCase}View',
+        '${name.pascalCase}Controller',
+        blocDir,
       ),
     );
     var repositoryFile = handleFileCreate(
@@ -106,12 +117,7 @@ class CreateModuleCommand extends Command {
       'repository',
       path,
       extraFolder,
-      RepositorySample(
-        '',
-        name,
-        '${name.pascalCase}Repository',
-        overwrite: overwrite,
-      ),
+      RepositorySample(repositoryName: '${name.pascalCase}Repository'),
     );
 
     LogService.success(

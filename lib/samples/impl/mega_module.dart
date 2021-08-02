@@ -2,15 +2,17 @@ import '../../common/utils/pubspec/pubspec_utils.dart';
 import '../interface/sample_interface.dart';
 
 /// [Sample] file from Module_View file creation.
-class GetViewSample extends Sample {
+class MegaModuleSample extends Sample {
   final String? _controllerDir;
   final String _viewName;
   final String? _controller;
 
-  GetViewSample(
-      String path, this._viewName, this._controller, this._controllerDir,
-      {bool overwrite = false})
-      : super(path, overwrite: overwrite);
+  MegaModuleSample(
+    String path,
+    this._viewName,
+    this._controller,
+    this._controllerDir,
+  ) : super(path = '');
 
   String get import => _controllerDir != null
       ? '''import 'package:${PubspecUtils.projectName}/$_controllerDir';'''
