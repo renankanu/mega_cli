@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:cli_dialog/cli_dialog.dart';
 import 'package:cli_menu/cli_menu.dart';
 import 'package:mega_cli/commands/interface/command.dart';
+import 'package:mega_cli/functions/app_module/mega_add_app_module.dart';
 import 'package:mega_cli/samples/impl/mega_screen.dart';
 import 'package:recase/recase.dart';
 
@@ -122,8 +123,15 @@ class CreateModuleCommand extends Command {
         screenImportDir: screenPath,
       ),
     );
+
+    addRoute(
+      name,
+      Structure.pathToDirImport(repositoryFile.path),
+      Structure.pathToDirImport(screenFile.path),
+    );
+
     LogService.success(
-        LocaleKeys.success_module_create.trArgs([name.pascalCase]));
+        '${LocaleKeys.success_module_create.trArgs([name.pascalCase])} 🚀');
   }
 
   @override

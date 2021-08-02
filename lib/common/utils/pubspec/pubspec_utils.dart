@@ -34,6 +34,23 @@ class PubspecUtils {
 
   static final _mapName = _PubValue<String>(() => pubSpec.name?.trim() ?? '');
   static String? get projectName => _mapName.value;
+
+  static final _extraFolder = _PubValue<bool?>(
+    () {
+      try {
+        var yaml = pubSpec.unParsedYaml!;
+        if (yaml.containsKey('get_cli')) {
+          if ((yaml['get_cli'] as Map).containsKey('sub_folder')) {
+            return (yaml['get_cli']['sub_folder'] as bool?);
+          }
+        }
+      } on Exception catch (_) {}
+      // retorno nulo está sendo tratado
+      // ignore: avoid_returning_null
+      return null;
+    },
+  );
+  static bool? get extraFolder => _extraFolder.value;
 }
 
 /// avoids multiple reads in one file

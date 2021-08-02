@@ -34,7 +34,7 @@ abstract class Command with ArgsMixin {
   /// validate command line arguments
   bool validate() {
     if (MegaCli.arguments.contains(commandName) ||
-        MegaCli.arguments.contains('$commandName.$name')) {
+        MegaCli.arguments.contains('$commandName:$name')) {
       var flagsNotAccepts = flags;
       flagsNotAccepts.removeWhere((element) => acceptedFlags.contains(element));
       if (flagsNotAccepts.isNotEmpty) {
