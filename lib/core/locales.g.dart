@@ -8,6 +8,7 @@ class LocaleKeys {
   LocaleKeys._();
   static const ask_existing_module = 'ask_existing_page';
   static const error_unnecessary_parameter = 'error_unnecessary_parameter';
+  static const ask_new_module_name = 'ask_new_page_name';
   static const error_unnecessary_parameter_plural =
       'error_unnecessary_parameter_plural';
   static const error_invalid_dart = 'error_invalid_dart';
@@ -66,6 +67,7 @@ class Locales {
   static const en = {
     'ask_existing_page':
         'The page [%s] already exists, do you want to overwrite it?',
+    'ask_new_page_name': 'what new name for the page?',
     'error_unnecessary_parameter': 'the %s parameter is not necessary',
     'error_unnecessary_parameter_plural': 'the %s parameters are not necessary',
     'error_invalid_dart': 'The %s is not a valid dart file',
