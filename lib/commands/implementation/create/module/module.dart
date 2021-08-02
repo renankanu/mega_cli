@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:cli_dialog/cli_dialog.dart';
 import 'package:cli_menu/cli_menu.dart';
 import 'package:mega_cli/commands/interface/command.dart';
-import 'package:mega_cli/functions/app_module/mega_add_app_module.dart';
+import 'package:mega_cli/functions/app_module/mega_app_routes.dart';
 import 'package:mega_cli/samples/impl/mega_screen.dart';
 import 'package:recase/recase.dart';
 
@@ -108,7 +108,7 @@ class CreateModuleCommand extends Command {
       MegaRepositorySample(repositoryName: '${name.pascalCase}Repository'),
     );
     var repositoryPath = Structure.pathToDirImport(repositoryFile.path);
-    handleFileCreate(
+    var moduleFile = handleFileCreate(
       name,
       'module',
       path,
@@ -123,12 +123,9 @@ class CreateModuleCommand extends Command {
         screenImportDir: screenPath,
       ),
     );
+    var modulePath = Structure.pathToDirImport(moduleFile.path);
 
-    addRoute(
-      name,
-      Structure.pathToDirImport(repositoryFile.path),
-      Structure.pathToDirImport(screenFile.path),
-    );
+    addAppPage('${name.pascalCase}Module', modulePath);
 
     LogService.success(
         '${LocaleKeys.success_module_create.trArgs([name.pascalCase])} 🚀');
