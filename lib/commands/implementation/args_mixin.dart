@@ -38,30 +38,6 @@ mixin ArgsMixin {
     return _getArg('on');
   }
 
-  /// return parameter `with`
-  ///
-  /// example run
-  /// `mega g model with assets/model/user.json`
-  ///
-  /// ```
-  /// print(withArgument); //  assets/model/user.json
-  /// ```
-  String get withArgument {
-    return _getArg('with');
-  }
-
-  /// return parameter `from`
-  ///
-  /// example run
-  /// `mega g model from 'YOUR_MODEL_URL'`
-  ///
-  /// ```
-  /// print(fromArgument); // 'YOUR_MODEL_URL'
-  /// ```
-  String get fromArgument {
-    return _getArg('from');
-  }
-
   /// return parameter `name`
   ///
   /// example run

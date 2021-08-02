@@ -51,7 +51,6 @@ class LocaleKeys {
   static const hint_generate_model = 'hint_generate_model';
   static const hint_help = 'hint_help';
   static const hint_init = 'hint_init';
-  static const hint_install = 'hint_install';
   static const hint_remove = 'hint_remove';
   static const hint_sort = 'hint_sort';
   static const hint_update = 'hint_update';
@@ -132,7 +131,6 @@ class Locales {
     'hint_generate_model': 'Json\'dan model sınıfı oluşturur',
     'hint_help': 'Yardımları gösterir',
     'hint_init': 'Mevcut projede seçilen yapıyı oluşturur:',
-    'hint_install': 'Mevcut projeye bir paket yükler (dependencies):',
     'hint_remove': 'Mevcut projedeki bir paketi kaldırır (dependencies):',
     'hint_sort': 'İçe aktarılanları sıralar ve dart dosyalarını biçimlendirir',
     'hint_update': 'mega_cli günceller',
@@ -218,8 +216,6 @@ class Locales {
     'hint_help': 'Diese Hilfe anzeigen',
     'hint_init':
         'die gewählte Struktur an einem bestehenden Projekt zu erzeugen:',
-    'hint_install':
-        'Dient zur Installation eines Pakets in Ihrem Projekt (dependencies):',
     'hint_remove':
         'Verwenden Sie diese Option, um ein Paket in Ihrem Projekt zu entfernen (dependencies):',
     'hint_sort': 'Importierte Dart-Dateien sortieren und formatieren',
@@ -304,7 +300,6 @@ class Locales {
     'hint_generate_model': 'generate Class model from json',
     'hint_help': 'Show this help',
     'hint_init': 'generate the chosen structure on an existing project:',
-    'hint_install': 'Use to install a package in your project (dependencies):',
     'hint_remove': 'Use to remove a package in your project (dependencies):',
     'hint_sort': 'Sort imports and format dart files',
     'hint_update': 'To update mega_cli',
@@ -385,8 +380,6 @@ class Locales {
     'hint_generate_model': 'Crie sua classe model apartir de um json',
     'hint_help': 'mostra a tela de help',
     'hint_init': 'Gere a estrutura escolhida em um projeto existente:',
-    'hint_install':
-        'Use para instalar um pacote em seu projeto (dependencies):',
     'hint_remove': 'Use para remover um pacote em seu projeto (dependencies):',
     'hint_sort': 'Classificar os imports e formatar arquivos dart',
     'hint_update': 'Para atualizar mega_cli',
